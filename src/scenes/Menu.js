@@ -9,9 +9,9 @@ class Menu extends Phaser.Scene {
         // We can load assets that we plan on using in future scenes
         // because Phaser provides a persistent cache, which holds all loaded
         // assets
-        this.load.image("rocket", "../../assets/rocket.png");
-        this.load.image("spaceship", "../../assets/spaceship.png");
-        this.load.image("starfield", "../../assets/starfield.png");
+        this.load.image("rocket", "src/assets/rocket.png");
+        this.load.image("spaceship", "src/assets/spaceship.png");
+        this.load.image("starfield", "src/assets/starfield.png");
         // Load spritesheet
         this.load.spritesheet("explosion", "./assets/explosion.png", {
             frameWidth: 64,
@@ -20,9 +20,9 @@ class Menu extends Phaser.Scene {
             endFrame: 9
         })
         // Load audio
-        this.load.audio('sfx-select', './assets/sfx-select.wav')
-        this.load.audio('sfx-explosion', './assets/sfx-explosion.wav')
-        this.load.audio('sfx-shot', './assets/sfx-shot.wav')
+        this.load.audio('sfx-select', 'assets/sfx-select.wav')
+        this.load.audio('sfx-explosion', '/assets/sfx-explosion.wav')
+        this.load.audio('sfx-shot', 'assets/sfx-shot.wav')
     }
 
     create() {
