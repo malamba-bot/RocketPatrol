@@ -5,9 +5,8 @@ class Play extends Phaser.Scene {
     }
 
     create() {
-        // Add starfield tile sprites
+        // Add starfield tile sprite
         this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
-        this.yellowStarfield = this.add.tileSprite(0, 0, 640, 480, 'yellowStarfield').setOrigin(0, 0);
         // Green UI background
         this.add.rectangle(0, borderUISize + borderPadding, game.config.width, borderUISize * 2, 0x00FF00).setOrigin(0, 0);
         // White borders
@@ -69,9 +68,7 @@ class Play extends Phaser.Scene {
         if(this.gameOver && Phaser.Input.Keyboard.JustDown(keyLEFT)) {
             this.scene.start("menuScene");
         }
-        // Scroll backgrounds
-        this.starfield.tilePositionX -= 2;
-        this.yellowStarfield.tilePositionX -= 4;
+        this.starfield.tilePositionX -= 4;
         if(!this.gameOver) {
             // Run p1Rocket's update loop
             this.p1Rocket.update();
